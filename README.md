@@ -1,4 +1,4 @@
-# SE Project
+# Software Engineering Project
 Repo for our Software engineering project website
 # Team Members
 1. Aishwarya Sharma
