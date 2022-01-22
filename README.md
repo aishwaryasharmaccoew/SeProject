@@ -24,7 +24,7 @@ Creating an ecomm website for swiss knives.
 4. Rxjs
 
 # Project set up guide
-asdfasfas
+
 # Link to extended documentation/help resources
 
 
