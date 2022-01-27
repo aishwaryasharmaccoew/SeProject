@@ -1,31 +1,35 @@
-# Software Engineering Project
-Repo for our Software engineering project website
+## Landing Page Read Me
 
-# Team Members
-1. Aishwarya Sharma
-2. Nimish Bajaj
-3. Siddhant Jain
-4. Vaibhav Mishra
+- This page will show a basic landing page view of all the products on teh ecomm website
+- Will contains
+    1. Card View of the Products
+    2. Side Menu for Filters
+    3. Top Menu Bar consisting - Logo, Search, Cart and Account Details
+    4. Bottom Footer
 
+## Development server
 
-# Introduction
-Creating an ecomm website for swiss knives.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-# Feature set
-## v0.1
-1. List items on the webpage
-2. Filter for an item using one of the filters
-3. Look at the product description page for an item
+## Code scaffolding
 
-# Tech Stack
-1. Angular
-2. Go
-3. Ionic
-4. Rxjs
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-# Project set up guide
+## Build
 
-# Link to extended documentation/help resources
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
 
