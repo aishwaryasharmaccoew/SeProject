@@ -1,4 +1,4 @@
-## Landing Page Read Me
+## About Landing Page (Branch Owner - Siddhant Jain)
 
 - This page will show a basic landing page view of all the products on teh ecomm website
 - Will contains
