@@ -6,5 +6,11 @@
 ```shell
 cd backend
 go mod download
+go install
 ```
 
+2. Run the backend server
+```shell
+cd src
+go run .
+```
