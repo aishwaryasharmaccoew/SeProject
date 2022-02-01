@@ -98,3 +98,9 @@ func QueryTable(filters []string) []models.ProductSQL {
 	log.Println(fmt.Sprintf("Number of results obtained %d", len(productsSql)))
 	return productsSql
 }
+
+func GetProduct(id string) models.ProductSQL {
+	var productSQL models.ProductSQL
+	DB.Where("Id = ?", id).First(&productSQL)
+	return productSQL
+}

@@ -19,6 +19,7 @@ import (
 func main() {
 	dao.SetupDb()
 	router := gin.Default()
+	router.GET("/", controller.LandingPage)
 	router.POST("/filter", controller.FilteredProducts)
 	err := router.Run(":5001")
 	if err != nil {
