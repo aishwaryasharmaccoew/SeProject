@@ -1,6 +1,8 @@
 # Software Engineering Project
 Repo for our Software engineering project website
 
+TODO:
+=======
 # Team Members
 1. Aishwarya Sharma
 2. Nimish Bajaj
@@ -23,10 +25,9 @@ Creating an ecomm website for swiss knives.
 3. Ionic
 4. Rxjs
 
-# Project set up guide
 
 # Link to extended documentation/help resources
-
+TODO:
 
 
 
