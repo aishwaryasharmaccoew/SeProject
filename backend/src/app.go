@@ -6,7 +6,6 @@ import (
 	"backend/src/controller"
 	dao "backend/src/database"
 	"github.com/gin-gonic/gin"
-	"log"
 )
 
 //func main() {
@@ -17,26 +16,12 @@ import (
 //	controller.FilteredProducts(query)
 //}
 
-type FilterQuery struct {
-	Filters []string `json:"filters,omitempty"`
-}
-
 func main() {
 	dao.SetupDb()
 	router := gin.Default()
-	router.POST("/filter", func(c *gin.Context) {
-		var filterQuery FilterQuery
-		err := c.BindJSON(&filterQuery)
-		log.Println(filterQuery)
-		if err != nil {
-			c.JSON(404, "Error while parsing the input JSON")
-			log.Println(err.Error())
-		}
-		c.JSON(200, controller.FilteredProducts(filterQuery.Filters)) // Your custom response here
-	})
-
+	router.POST("/filter", controller.FilteredProducts)
 	err := router.Run(":5001")
 	if err != nil {
-		log.Fatalln(err.Error())
+		return
 	}
 }

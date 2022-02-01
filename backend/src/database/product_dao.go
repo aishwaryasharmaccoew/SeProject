@@ -90,8 +90,8 @@ func printData(db *gorm.DB) {
 // TODO: implement pagination
 func QueryTable(filters []string) []models.ProductSQL {
 	var productsSql []models.ProductSQL
-	tx := DB.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filters[0])).Find(&productsSql)
-	for i := 1; i < len(filters); i++ {
+	tx := DB.Find(&productsSql)
+	for i := 0; i < len(filters); i++ {
 		var filter = filters[i]
 		tx.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filter)).Find(&productsSql)
 	}
