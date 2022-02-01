@@ -1,27 +1,30 @@
-# SeProject
+# Software Engineering Project
 Repo for our Software engineering project website
+
+TODO:
+=======
+# Team Members
+1. Aishwarya Sharma
+2. Nimish Bajaj
+3. Siddhant Jain
+4. Vaibhav Mishra
 
 
 # Introduction
-This is an open source repository for a pizza ordering and delivery application. 
+Creating an ecomm website for swiss knives.
 
 # Feature set
 ## v0.1
-1. Browse through avaialable Pizzas to purchase
-2. Configure pizza size and topings
-3. Billing and checkout
-
+1. List items on the webpage
+2. Filter for an item using one of the filters
+3. Look at the product description page for an item
 
 # Tech Stack
-## Front-end
-Angular
+1. Angular
+2. Go
+3. Ionic
+4. Rxjs
 
-## Backend
-Golang
-Docker
-
-# Project set up quide
-TODO:
 
 # Link to extended documentation/help resources
 TODO:
