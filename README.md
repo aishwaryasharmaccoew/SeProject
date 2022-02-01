@@ -1,8 +1,6 @@
 # Software Engineering Project
 Repo for our Software engineering project website
 
-TODO:
-=======
 # Team Members
 1. Aishwarya Sharma
 2. Nimish Bajaj
