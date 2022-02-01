@@ -18,12 +18,12 @@ localhost:5001/product/B-0.2373.T
 ```
 
 
-## Filter API
+## Product Filter API
 This API accepts an array of filter elements on the product tools and returns the filtered list of products.
 
 **Type** POST
 
-**URL:** localhost:5001/filter 
+**URL:** localhost:5001/product 
 
 **Sample Payload:**
 ```json

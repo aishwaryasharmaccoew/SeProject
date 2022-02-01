@@ -21,7 +21,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/", controller.LandingPage)
 	router.GET("/product/:id", controller.GetProduct)
-	router.POST("/filter", controller.FilteredProducts)
+	router.POST("/product", controller.FilteredProducts)
 	err := router.Run(":5001")
 	if err != nil {
 		return

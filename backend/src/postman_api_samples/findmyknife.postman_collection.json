@@ -8,26 +8,6 @@
 	},
 	"item": [
 		{
-			"name": "localhost:5001/filter",
-			"request": {
-				"url": "localhost:5001/filter",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"filters\": [\"screw\", \"scissor\", \"large\"]\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
 			"name": "localhost:5001/",
 			"request": {
 				"url": "localhost:5001/",
@@ -45,6 +25,26 @@
 				"method": "GET",
 				"header": [],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5001/product",
+			"request": {
+				"url": "localhost:5001/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filters\": [\"scissor\", \"blade\"]\n}"
+				},
 				"description": ""
 			},
 			"response": []
