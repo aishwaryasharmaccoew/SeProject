@@ -20,6 +20,7 @@ func main() {
 	dao.SetupDb()
 	router := gin.Default()
 	router.GET("/", controller.LandingPage)
+	router.GET("/product/:id", controller.GetProduct)
 	router.POST("/filter", controller.FilteredProducts)
 	err := router.Run(":5001")
 	if err != nil {
