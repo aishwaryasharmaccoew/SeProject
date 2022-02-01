@@ -1,32 +1,47 @@
-package main
+package dao
 
 import (
 	"backend/src/database/models"
+	"fmt"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"log"
+	"os"
 	"strings"
 )
 
-func main() {
-	var file_path = "/Users/nimishbajaj/GolandProjects/SeProject/backend/src/database/files/vict_products_detailed.jsonl"
-	var product_list = Read(file_path)
-	//log.Println(product_list)
+var DB *gorm.DB
 
+func connectDB() {
 	db, err := gorm.Open(sqlite.Open("findmyknife.db"), &gorm.Config{})
 
 	if err != nil {
 		log.Fatal("Error opening the database")
 	}
+	DB = db
+}
 
-	err2 := db.AutoMigrate(&models.ProductSQL{})
+// TODO: change the path to relative path
+func insertRowsFromJSON() {
+	var file_path = "/Users/nimishbajaj/GolandProjects/SeProject/backend/src/database/files/vict_products_detailed.jsonl"
+	var product_list = Read(file_path)
+	err2 := DB.AutoMigrate(&models.ProductSQL{})
 	if err2 != nil {
 		log.Fatal(err2.Error())
 	}
+	addData(DB, product_list)
+	//printData(DB)
+}
 
-	addData(db, product_list)
-
-	printData(db)
+func SetupDb() {
+	db_file_path := "findmyknife.db"
+	_, err := os.OpenFile(db_file_path, os.O_RDWR, 0644)
+	if err == nil {
+		e := os.Remove(db_file_path)
+		check(e)
+	}
+	connectDB()
+	insertRowsFromJSON()
 }
 
 func listToString(items []string) string {
@@ -70,4 +85,16 @@ func printData(db *gorm.DB) {
 		}
 		log.Println(productSQL)
 	}
+}
+
+// TODO: implement pagination
+func QueryTable(filters []string) []models.ProductSQL {
+	var productsSql []models.ProductSQL
+	tx := DB.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filters[0])).Find(&productsSql)
+	for i := 1; i < len(filters); i++ {
+		var filter = filters[i]
+		tx.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filter)).Find(&productsSql)
+	}
+	log.Println(fmt.Sprintf("Number of results obtained %d", len(productsSql)))
+	return productsSql
 }

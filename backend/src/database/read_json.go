@@ -1,4 +1,4 @@
-package main
+package dao
 
 import (
 	"backend/src/database/models"
@@ -10,7 +10,7 @@ import (
 
 func check(e error) {
 	if e != nil {
-		log.Fatalln(e.Error())
+		log.Fatal(e.Error())
 	}
 }
 
@@ -27,7 +27,6 @@ func Read(path string) []models.Product {
 		var product models.Product
 		err = json.Unmarshal(scanner.Bytes(), &product)
 		check(err)
-		//log.Println(product.Name)
 		product_list = append(product_list, product)
 	}
 
