@@ -25,7 +25,7 @@ Creating an ecomm website for swiss knives.
 
 
 # Link to extended documentation/help resources
-TODO:
+API Documentation: https://github.com/aishwaryasharmaccoew/SeProject/blob/9c3673469417be664872f1ee00b57549d0cdb8f4/backend/api_documentation.md
 
 
 
