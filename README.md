@@ -1,8 +1,6 @@
 # Software Engineering Project
 Repo for our Software engineering project website
 
-TODO:
-=======
 # Team Members
 1. Aishwarya Sharma
 2. Nimish Bajaj
@@ -27,7 +25,7 @@ Creating an ecomm website for swiss knives.
 
 
 # Link to extended documentation/help resources
-TODO:
+API Documentation: https://github.com/aishwaryasharmaccoew/SeProject/blob/9c3673469417be664872f1ee00b57549d0cdb8f4/backend/api_documentation.md
 
 
 
