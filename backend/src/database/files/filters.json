@@ -1,0 +1,187 @@
+[
+  {
+    "title": "phillips_screwdriver",
+    "features": [
+      "Phillips screwdriver 0/1, magnetic",
+      "Phillips screwdriver 000",
+      "Phillips screwdriver 1/2"
+    ]
+  },
+  {
+    "title": "LED",
+    "features": [
+      "LED"
+    ]
+  },
+  {
+    "title": "screwdriver",
+    "features": [
+      "screwdriver 2 mm",
+      "screwdriver 2.5 mm",
+      "screwdriver 3 mm",
+      "screwdriver 3.5 mm",
+      "screwdriver 5 mm",
+      "screwdriver 6 mm",
+      "screwdriver 7 mm, lockable",
+      "screwdriver 7.5 mm",
+      "mini screwdriver",
+      "Torx screwdriver T4"
+    ]
+  },
+  {
+    "title": "blade",
+    "features": [
+      "blade, curved",
+      "blade, pointed tip",
+      "blade, straight",
+      "small blade",
+      "small gutting blade",
+      "pruning blade",
+      "large blade",
+      "large blade with Damast steel",
+      "large blade with rounded tip",
+      "large blade with wavy edge",
+      "electrician's blade"
+    ]
+  },
+  {
+    "title": "corkscrew",
+    "features": [
+      "corkscrew"
+    ]
+  },
+  {
+    "title": "openers",
+    "features": [
+      "bottle opener",
+      "can opener",
+      "crate opener",
+      "shackle opener",
+      "strong crate opener"
+    ]
+  },
+  {
+    "title": "special features",
+    "features": [
+      "pressurized ballpoint pen",
+      "magnifying glass",
+      "USB stick 32 GB"
+    ]
+  },
+  {
+    "title": "electrical work",
+    "features": [
+      "wire bender",
+      "wire crimping tool",
+      "wire cutter",
+      "wire cutter for thin and soft wire up to 40 HRC",
+      "wire scraper",
+      "wire stripper",
+      "hard wire cutter"
+    ]
+  },
+  {
+    "title": "scissors",
+    "features": [
+      "scissors",
+      "serrated edge scissors"
+    ]
+  },
+  {
+    "title": "manicure",
+    "features": [
+      "nail cleaner",
+      "nail clipper",
+      "nail file",
+      "glass nail file"
+    ]
+  },
+  {
+    "title": "reamer",
+    "features": [
+      "reamer, punch",
+      "reamer, punch and sewing awl"
+    ]
+  },
+  {
+    "title": "ruler",
+    "features": [
+      "ruler (cm)",
+      "ruler (inches)"
+    ]
+  },
+  {
+    "title": "saw",
+    "features": [
+      "metal saw",
+      "wood saw",
+      "disc saw for shatterproof glass"
+    ]
+  },
+  {
+    "title": "meters",
+    "features": [
+      "thermometer (°C)",
+      "thermometer (°F)",
+      "barometer",
+      "altimeter (feet)",
+      "altimeter (m)"
+    ]
+  },
+  {
+    "title": "chisel",
+    "features": [
+      "chisel 4 mm",
+      "chisel 7 mm and scraper"
+    ]
+  },
+  {
+    "title": "watch",
+    "features": [
+      "countdown",
+      "digital watch (12h)",
+      "digital watch (24h)",
+      "alarm"
+    ]
+  },
+  {
+    "title": "bit work",
+    "features": [
+      "bit case",
+      "bit slot",
+      "bit slotted 4.5",
+      "bit wrench",
+      "bit Phillips 3"
+    ]
+  },
+  {
+    "title": "other features",
+    "features": [
+      "Clip",
+      "Money-Clip",
+      "SIM card pin",
+      "bark lifter",
+      "cap crimper",
+      "extension bar",
+      "female Hex drive 4 mm for bits",
+      "female Hex drive 5 mm for D-SUB connectors",
+      "fish scaler",
+      "fondue forkgroove cleaner",
+      "hoof cleaner",
+      "hook disgorger",
+      "key ring",
+      "lanyard hole",
+      "marlin spike",
+      "metal file",
+      "multipurpose hookneedle-nosed pliers",
+      "pharmaceutical spatula",
+      "pin, stainless steel",
+      "pliers",
+      "seatbelt cutter",
+      "tee punchtimer",
+      "toothpick",
+      "tweezers",
+      "universal wrench M3, M4, M5"
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "findmyknife",
+		"_postman_id": "e71d47ad-5bc4-fd6a-7494-fd1a0b19053b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5001/",
+			"request": {
+				"url": "localhost:5001/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5001/product/B-0.2373.T",
+			"request": {
+				"url": "localhost:5001/product/B-0.2373.T",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5001/product",
+			"request": {
+				"url": "localhost:5001/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"filters\": [\"scissor\", \"blade\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
