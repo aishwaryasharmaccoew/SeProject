@@ -11,30 +11,41 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 import { AppComponent } from './app.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AngularMaterialModule } from './angular-material.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomeComponent,
     LoginComponent,
     SignupComponent
   ],
   imports: [
     BrowserModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
     AppRoutingModule,
     GaugeModule.forRoot(),
     MatFormFieldModule,
     MatSelectModule,
     MatIconModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
