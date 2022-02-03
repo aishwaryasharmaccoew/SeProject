@@ -3,11 +3,13 @@ package dao
 import (
 	"backend/src/database/models"
 	"fmt"
-	"gorm.io/driver/sqlite"
-	"gorm.io/gorm"
 	"log"
 	"os"
+	"path/filepath"
 	"strings"
+
+	"gorm.io/driver/sqlite"
+	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
@@ -21,9 +23,8 @@ func connectDB() {
 	DB = db
 }
 
-// TODO: change the path to relative path
 func insertRowsFromJSON() {
-	var file_path = "/Users/nimishbajaj/GolandProjects/SeProject/backend/src/database/files/vict_products_detailed.jsonl"
+	file_path, _ := filepath.Abs("../src/database/files/vict_products_detailed.jsonl")
 	var product_list = Read(file_path)
 	err2 := DB.AutoMigrate(&models.ProductSQL{})
 	if err2 != nil {
