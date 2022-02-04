@@ -1,18 +1,8 @@
-# Software Engineering Project
-Repo for our Software engineering project website
-
-# Team Members
-1. Aishwarya Sharma
-2. Nimish Bajaj
-3. Siddhant Jain
-4. Vaibhav Mishra
-
-
 # Introduction
-Creating an ecomm website for swiss knives.
+Creating an E-commerce website for Swiss Knives as part of Software Engineer course work.
 
-# Feature set
-## v0.1
+# Feature Set
+## v0.1 
 1. List items on the webpage
 2. Filter for an item using one of the filters
 3. Look at the product description page for an item
@@ -22,10 +12,16 @@ Creating an ecomm website for swiss knives.
 2. Go
 3. Ionic
 4. Rxjs
-
+5. SQLite
+6. Gin
+7. Gorm
 
 # Link to extended documentation/help resources
-API Documentation: https://github.com/aishwaryasharmaccoew/SeProject/blob/9c3673469417be664872f1ee00b57549d0cdb8f4/backend/api_documentation.md
+Backend API Documentation: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/api_documentation.md)  
+Postman Collection (v2): [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/src/postman_api_samples/findmyknife.postman_collection.json)
 
-
-
+# Team Members
+1. Aishwarya Sharma
+2. Nimish Bajaj
+3. Siddhant Jain
+4. Vaibhav Mishra
