@@ -5,6 +5,7 @@ package main
 import (
 	"backend/src/controller"
 	dao "backend/src/database"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -21,7 +22,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/", controller.LandingPage)
 	router.GET("/product/:id", controller.GetProduct)
-	router.POST("/product", controller.FilteredProducts)
+	router.POST("/product/:id", controller.FilteredProducts)
 	err := router.Run(":5001")
 	if err != nil {
 		return

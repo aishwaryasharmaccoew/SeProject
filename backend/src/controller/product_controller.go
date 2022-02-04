@@ -3,8 +3,9 @@ package controller
 import (
 	dao "backend/src/database"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"log"
+
+	"github.com/gin-gonic/gin"
 )
 
 type FilterQuery struct {
@@ -14,12 +15,14 @@ type FilterQuery struct {
 func FilteredProducts(c *gin.Context) {
 	var filterQuery FilterQuery
 	err := c.BindJSON(&filterQuery)
+	pageid := c.Param("id")
+
 	log.Println(filterQuery)
 	if err != nil {
 		c.JSON(404, "Error while parsing the input JSON")
 		log.Println(err.Error())
 	}
-	query_result := dao.QueryTable(filterQuery.Filters)
+	query_result := dao.PaginatedQueryTable(filterQuery.Filters, pageid)
 	c.JSON(200, query_result)
 }
 
