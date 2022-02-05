@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -19,18 +18,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppComponent } from './app.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
 import { AngularMaterialModule } from './angular-material.module';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent,
     LoginComponent,
-    SignupComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +35,6 @@ import { AngularMaterialModule } from './angular-material.module';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    AppRoutingModule,
     GaugeModule.forRoot(),
     MatFormFieldModule,
     MatSelectModule,
