@@ -18,7 +18,10 @@ Creating an E-commerce website for Swiss Knives as part of Software Engineer cou
 
 # Video with demo of system
 ## Frontend Resources
-**FrontEnd video**: [Link](https://www.youtube.com/watch?v=Wdyq0oZhzyA)
+**FrontEnd Documentation**: [Link](https://docs.google.com/document/d/1D9z5ZisuVJMVRzL_k3Ux8g1JlbRcEbv7pKSadGegeSk/edit)
+**FrontEnd video 1**: [Link](https://www.youtube.com/watch?v=Wdyq0oZhzyA)
+**FrontEnd video 2**: [Link](https://youtu.be/5dBOIze39fo)
+
 
 ## Backend Resources
 **Backend API Documentation**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/api_documentation.md)  
