@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { APIResponse, Game } from 'src/app/models';
+import { APIResponse, Item } from '../../models';
 import { HttpService } from 'src/app/services/http.service';
 
+interface Food {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +18,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   public items: Array<Item>;
   private routeSub: Subscription;
   private itemSub: Subscription;
-
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
   constructor(    
     private httpService: HttpService,
     private router: Router,
@@ -24,23 +31,23 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
       if (params['game-search']) {
-        this.searchGames('metacrit', params['game-search']);
+        this.searchItems('metacrit', params['game-search']);
       } else {
-        this.searchGames('metacrit');
+        this.searchItems('metacrit');
       }
     });
   }
 
-  searchGames(sort: string, search?: string): void {
+  searchItems(sort: string, search?: string): void {
     this.itemSub = this.httpService
-      .getGameList(sort, search)
-      .subscribe((gameList: APIResponse<Game>) => {
-        this.items = gameList.results;
-        console.log(gameList);
+      .getItemList(sort, search)
+      .subscribe((itemList: APIResponse<Item>) => {
+        this.items = itemList.results;
+        console.log("il "+itemList);
       });
   }
 
-  openGameDetails(id: string): void {
+  openItemDetails(id: string): void {
     this.router.navigate(['details', id]);
   }
 
