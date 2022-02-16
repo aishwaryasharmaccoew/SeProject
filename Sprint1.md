@@ -28,7 +28,7 @@ Creating an E-commerce website for Swiss Knives as part of Software Engineer cou
 ## Backend Resources
 **Backend API Documentation**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/api_documentation.md)  
 **Postman Collection (v2)**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/src/postman_api_samples/findmyknife.postman_collection.json)  
-**Video Demo**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/src/database/files/video1234993162.mp4)
+**Video Demo**: [Link](https://youtu.be/fNSC1GE8MM8)
 
 
 # Team Members
