@@ -4,9 +4,12 @@ go 1.17
 
 require (
 	github.com/gin-gonic/gin v1.7.7
+	github.com/gorilla/handlers v1.5.1
 	gorm.io/driver/sqlite v1.2.6
 	gorm.io/gorm v1.22.5
 )
+
+require github.com/felixge/httpsnoop v1.0.1 // indirect
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -26,4 +29,5 @@ require (
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
 	golang.org/x/sys v0.0.0-20200116001909-b77594299b42 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
+
 )
