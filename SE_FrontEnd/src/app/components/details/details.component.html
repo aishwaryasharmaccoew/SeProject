@@ -1,1 +1,40 @@
-<p>details works!</p>
+<div class="details">
+    <div class="item-banner">
+      <img
+        class="item-banner-img"
+        src="{{ item.background_image }}"
+        alt="background image"
+      />
+    </div>
+    <div class="item-content">
+      <div class="details-wrapper">
+        <div class="item-header">
+          <h1 class="item-header-title">{{ item.name }}</h1>
+          <h2 class="game-header-release-date">
+            Release: {{ item.released | date }}
+          </h2>
+          
+          <div class="item-gauge">
+            <mwl-gauge
+              class="two"
+              [max]="100"
+              [dialStartAngle]="180"
+              [dialEndAngle]="0"
+              [value]="itemRating"
+              [animated]="true"
+              [color]="getColor"
+              [animationDuration]="2"
+            >
+            </mwl-gauge>
+            <a
+              class="item-gauge-label"
+              target="_blank"
+              href="{{ item.metacritic_url }}"
+              >Metacritic</a
+            >
+          </div>
+        </div>
+        <app-game-tabs [game]="game"></app-game-tabs>
+      </div>
+    </div>
+  </div>

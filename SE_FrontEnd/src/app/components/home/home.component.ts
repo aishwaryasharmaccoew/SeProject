@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getItemList(sort, search)
       .subscribe((itemList: APIResponse<Item>) => {
         this.items = itemList.results;
-        console.log("il "+itemList);
+        console.log(itemList);
       });
   }
 

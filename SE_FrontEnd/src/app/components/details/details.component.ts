@@ -14,7 +14,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   itemId: string;
   item: Item;
   routeSub: Subscription;
-  gameSub: Subscription;
+  itemSub: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,15 +24,15 @@ export class DetailsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
       this.itemId = params['id'];
-      this.getGameDetails(this.itemId);
+      this.getItemDetails(this.itemId);
     });
   }
 
-  getGameDetails(id: string): void {
-    this.gameSub = this.httpService
+  getItemDetails(id: string): void {
+    this.itemSub = this.httpService
       .getItemDetails(id)
-      .subscribe((gameResp: Item) => {
-        this.item = gameResp;
+      .subscribe((itemResp: Item) => {
+        this.item = itemResp;
       });
   }
 
@@ -49,8 +49,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.gameSub) {
-      this.gameSub.unsubscribe();
+    if (this.itemSub) {
+      this.itemSub.unsubscribe();
     }
 
     if (this.routeSub) {

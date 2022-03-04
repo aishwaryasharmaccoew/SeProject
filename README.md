@@ -17,7 +17,7 @@ Creating an ecomm website for swiss knives.
 2. Filter for an item using one of the filters
 3. Look at the product description page for an item
 
-# Tech Stack
+# Tech Stack 
 1. Angular
 2. Go
 3. Ionic
