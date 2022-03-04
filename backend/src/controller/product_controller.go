@@ -27,6 +27,10 @@ func FilteredProducts(c *gin.Context) {
 }
 
 func LandingPage(c *gin.Context) {
+
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
+
 	query_result := dao.QueryTable([]string{})
 	c.JSON(200, query_result)
 }
