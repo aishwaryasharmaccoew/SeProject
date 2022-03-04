@@ -38,6 +38,7 @@
 					"raw": "{\n\t\"filters\": [\"scissor\", \"blade\"]\n}"
 				},
 				"url": "localhost:5001/product/B-0.2373.T"
+
 			},
 			"response": []
 		}

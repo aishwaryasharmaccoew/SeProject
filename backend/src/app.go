@@ -8,17 +8,10 @@ import (
 	"log"
 	"net/http"
 
+
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/handlers"
 )
-
-//func main() {
-//	log.Println("Inside the app")
-//	dao.SetupDb()
-//
-//	var query = []string{"screw", "large", "scissor"}
-//	controller.FilteredProducts(query)
-//}
 
 func main() {
 	dao.SetupDb()
