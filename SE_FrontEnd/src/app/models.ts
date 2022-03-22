@@ -13,6 +13,7 @@
   export interface APIResponse<T> {
       results: Array<T>;
       
+      
   }
   
   export interface Product {

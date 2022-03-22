@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Item } from 'src/app/models';
+import { Item, Product } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -10,11 +10,15 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit, OnDestroy {
+  stringJson: any;
+  stringObject: any;
   itemRating = 0;
-  itemId: string;
+
+  productID: string;
   item: Item;
+  product: Product;
   routeSub: Subscription;
-  gameSub: Subscription;
+  apiSub: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,16 +27,17 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {
-      this.itemId = params['id'];
-      this.getGameDetails(this.itemId);
+      this.productID = params['id'];
+      this.getProductDetails(this.productID);
     });
   }
 
-  getGameDetails(id: string): void {
-    this.gameSub = this.httpService
+  getProductDetails(id: string): void {
+    this.apiSub = this.httpService
       .getItemDetails(id)
-      .subscribe((gameResp: Item) => {
-        this.item = gameResp;
+      .subscribe((apiResp: Product) => {
+        this.product= apiResp;
+
       });
   }
 
@@ -49,8 +54,8 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.gameSub) {
-      this.gameSub.unsubscribe();
+    if (this.apiSub) {
+      this.apiSub.unsubscribe();
     }
 
     if (this.routeSub) {

@@ -1,1 +1,30 @@
-<p>details works!</p>
+
+  <div class="products">  
+    <ng-container >
+      <div class="product" >
+        <p class="item-name">{{ product.Name }}</p>
+        <div class="item-thumb-container">
+          <img
+           *ngIf="product.ImageUrl"
+            src="{{ product.ImageUrl }}"
+    
+            alt="thumbnail"
+            class="item-thumbnail"
+          />
+        <p *ngIf="!product.ImageUrl">No image</p>
+        </div>
+        <div class="item-description">
+
+          <p class="item-price">PRICE: {{ product.Price }} USD </p>
+          <p class="item-category">CATEGORY: {{ product.Category }}</p>
+          <p class="item-colors">COLORS: {{ product.Colors }}</p>
+          <p class="item-url">URL: {{ product.Product_url }}</p>
+          <p class="item-features">FEATURES: {{ product.Key_features }}</p>
+          <p class="item-tools">TOOLS: {{ product.Tools }}</p>
+
+        </div>
+      </div>
+    </ng-container>> 
+  </div> 
+
+  

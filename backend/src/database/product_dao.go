@@ -100,25 +100,6 @@ func QueryTable(filters []string) []models.ProductSQL {
 	log.Println(fmt.Sprintf("Number of results obtained %d", len(productsSql)))
 	return productsSql
 }
-func PaginatedQueryTable(filters []string, pageID string) *models.ProductList {
-	// hardcoding pageId to check API
-	//pageID := "B-0.8413.M3"
-	pageSize := 5
-	productsSql := &models.ProductList{}
-	tx := DB.Find(&productsSql.Items)
-	for i := 0; i < len(filters); i++ {
-		var filter = filters[i]
-		tx = tx.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filter)).Find(&productsSql.Items)
-	}
-	tx.Where("Id >= ?", pageID).Order("Id").Limit(pageSize + 1).Find(&productsSql.Items)
-	if len(productsSql.Items) == pageSize+1 {
-		productsSql.NextPageID = productsSql.Items[len(productsSql.Items)-1].Id
-		productsSql.Items = productsSql.Items[:pageSize] // this shortens the slice by 1
-	}
-	log.Println(fmt.Sprintf("Number of results obtained %d", len(productsSql.Items)))
-	log.Println(fmt.Sprintf("Id obtained %s", pageID))
-	return productsSql
-}
 
 func PaginatedQueryTable(filters []string, pageID string) *models.ProductList {
 	// hardcoding pageId to check API

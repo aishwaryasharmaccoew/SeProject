@@ -13,6 +13,8 @@ type FilterQuery struct {
 }
 
 func FilteredProducts(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 	var filterQuery FilterQuery
 	err := c.BindJSON(&filterQuery)
 	pageid := c.Param("id")
@@ -36,6 +38,8 @@ func LandingPage(c *gin.Context) {
 }
 
 func GetProduct(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 	id := c.Param("id")
 	log.Println(fmt.Sprintf("Id %s", id))
 	query_result := dao.GetProduct(id)
