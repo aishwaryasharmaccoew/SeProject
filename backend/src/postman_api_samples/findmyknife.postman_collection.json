@@ -1,50 +1,44 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "0fb0a54a-1bca-4d2e-b79a-01c5b46bb2f6",
 		"name": "findmyknife",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "5b9dee22-776b-e816-730a-c6f53b1ad126",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "localhost:5001/",
 			"request": {
+				"url": "localhost:5001/",
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "localhost:5001/",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						""
-					]
-				}
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "localhost:5001/product/B-0.2373.T",
 			"request": {
+				"url": "localhost:5001/product/B-0.2373.T",
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "localhost:5001/product/B-0.2373.T",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"product",
-						"B-0.2373.T"
-					]
-				}
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "host:5001/product/B-0.8413.M3",
 			"request": {
+				"url": "localhost:5001/product/B-0.2373.T",
 				"method": "POST",
 				"header": [
 					{
@@ -56,23 +50,14 @@
 					"mode": "raw",
 					"raw": "{\n\t\"filters\": [\"scissor\", \"blade\"]\n}"
 				},
-				"url": {
-					"raw": "localhost:5001/product/B-0.2373.T",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"product",
-						"B-0.2373.T"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "localhost:5001/signup",
 			"request": {
+				"url": "localhost:5001/signup",
 				"method": "POST",
 				"header": [
 					{
@@ -84,22 +69,14 @@
 					"mode": "raw",
 					"raw": "{\n    \"UserName\": \"abc\",\n    \"Password\": \"test\",\n    \"FirstName\": \"aishwarya\",\n    \"LastName\": \"sharma\",\n    \"Email\": \"abc@gmail.com\"\n}"
 				},
-				"url": {
-					"raw": "localhost:5001/signup",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"signup"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "localhost:5001/login",
 			"request": {
+				"url": "localhost:5001/login",
 				"method": "POST",
 				"header": [
 					{
@@ -111,16 +88,7 @@
 					"mode": "raw",
 					"raw": "{ \"UserName\": \"abc\", \"Password\":\"test\"}"
 				},
-				"url": {
-					"raw": "localhost:5001/login",
-					"host": [
-						"localhost"
-					],
-					"port": "5001",
-					"path": [
-						"login"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		}

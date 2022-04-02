@@ -20,11 +20,12 @@ func main() {
 
 	origins := handlers.AllowedOrigins([]string{"http://localhost:5001", "http://localhost:4200"})
 
-	router.GET("/", controller.LandingPage)
+  router.GET("/", controller.LandingPage)
 	router.GET("/product/:id", controller.GetProduct)
-	router.POST("/product/:id", controller.FilteredProducts)
+	router.POST("/product", controller.FilteredProducts)
 	router.POST("/login", controller.Login)
 	router.POST("/signup", controller.SignUp)
+
 	err := router.Run(":5001")
 	if err != nil {
 		return

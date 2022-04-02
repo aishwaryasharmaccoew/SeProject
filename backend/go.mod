@@ -7,12 +7,9 @@ require (
 	github.com/gorilla/handlers v1.5.1
 	gorm.io/driver/sqlite v1.2.6
 	gorm.io/gorm v1.22.5
-	github.com/golang/mock v1.6.0
 )
 
 require (
-	//for test cases
-	github.com/golang/mock v1.6.0
 	//for integration
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
