@@ -8,7 +8,6 @@ import (
 	"log"
 	"net/http"
 
-
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/handlers"
 )
@@ -23,7 +22,7 @@ func main() {
 
 	router.GET("/", controller.LandingPage)
 	router.GET("/product/:id", controller.GetProduct)
-	router.POST("/product/:id", controller.FilteredProducts)
+	router.POST("/product", controller.FilteredProducts)
 
 	err := router.Run(":5001")
 	if err != nil {

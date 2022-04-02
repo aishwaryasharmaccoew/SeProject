@@ -1,31 +1,44 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "0fb0a54a-1bca-4d2e-b79a-01c5b46bb2f6",
-		"name": "findmyknife",
+		"name": "findmyknife copy",
+		"_postman_id": "3ed0d4fe-e6d9-f79d-524e-c9c168347394",
+		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "localhost:5001/",
 			"request": {
+				"url": "localhost:5001/",
 				"method": "GET",
 				"header": [],
-				"url": "localhost:5001/"
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "localhost:5001/product/B-0.2373.T",
 			"request": {
+				"url": "localhost:5001/product/B-0.2373.T",
 				"method": "GET",
 				"header": [],
-				"url": "localhost:5001/product/B-0.2373.T"
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "host:5001/product/B-0.8413.M3",
 			"request": {
+				"url": "localhost:5001/product/B-0.2373.T",
 				"method": "POST",
 				"header": [
 					{
@@ -37,8 +50,7 @@
 					"mode": "raw",
 					"raw": "{\n\t\"filters\": [\"scissor\", \"blade\"]\n}"
 				},
-				"url": "localhost:5001/product/B-0.2373.T"
-
+				"description": ""
 			},
 			"response": []
 		}

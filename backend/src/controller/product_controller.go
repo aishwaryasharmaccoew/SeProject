@@ -4,6 +4,7 @@ import (
 	dao "backend/src/database"
 	"fmt"
 	"log"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,26 +13,54 @@ type FilterQuery struct {
 	Filters []string `json:"filters,omitempty"`
 }
 
+func getPaginationInfo(c *gin.Context) (int, int) {
+	numResults, err := strconv.Atoi(c.Query("numResults"))
+	if err != nil {
+		log.Println(err.Error())
+		return -1, -1
+	}
+
+	pageNum, err := strconv.Atoi(c.Query("pageNum"))
+	if err != nil {
+		log.Println(err.Error())
+		return -1, -1
+	}
+
+	return numResults, pageNum
+}
+
 func FilteredProducts(c *gin.Context) {
 	var filterQuery FilterQuery
 	err := c.BindJSON(&filterQuery)
-	pageid := c.Param("id")
+	if err != nil {
+		log.Println(err.Error())
+		c.JSON(404, "Error while parsing the input JSON")
+		return
+	}
+
+	numResults, pageNum := getPaginationInfo(c)
+
+	if numResults == -1 {
+		c.JSON(404, "Error while parsing the input JSON")
+		return
+	}
 
 	log.Println(filterQuery)
-	if err != nil {
-		c.JSON(404, "Error while parsing the input JSON")
-		log.Println(err.Error())
-	}
-	query_result := dao.PaginatedQueryTable(filterQuery.Filters, pageid)
+	query_result := dao.QueryTable(filterQuery.Filters, numResults, pageNum)
 	c.JSON(200, query_result)
 }
 
 func LandingPage(c *gin.Context) {
-
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	query_result := dao.QueryTable([]string{})
+	numResults, pageNum := getPaginationInfo(c)
+	if numResults == -1 {
+		c.JSON(404, "Error while parsing the input JSON")
+		return
+	}
+
+	query_result := dao.QueryTable([]string{}, numResults, pageNum)
 	c.JSON(200, query_result)
 }
 
