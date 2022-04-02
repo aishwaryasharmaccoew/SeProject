@@ -217,8 +217,7 @@ localhost:5001/product?numResults=10&pageNum=1
             "Key_features": "",
             "Tools": "small blade,scissors,nail file,screwdriver 2.5 mm"
         }
-    ],
-    "next_page_id": "B-0.6540.16"
+    ]
 }
 ```
 
