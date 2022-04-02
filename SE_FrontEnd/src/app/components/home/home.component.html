@@ -19,23 +19,21 @@
   
 
   
-  
-  
-  
-  <div class="items">  
-    <ng-container *ngFor="let item of items">
-      <div class="item" (click)="openItemDetails(item.id)">
+  <div class="products">  
+    <ng-container *ngFor="let product of products">
+      <div class="product" (click)="openItemDetails(product.Id)">
         <div class="item-thumb-container">
           <img
-           *ngIf="item.background_image"
-            src="{{ item.background_image }}"
+           *ngIf="product.ImageUrl"
+            src="{{ product.ImageUrl }}"
+    
             alt="thumbnail"
             class="item-thumbnail"
           />
-        <p *ngIf="!item.background_image">No image</p>
+        <p *ngIf="!product.ImageUrl">No image</p>
         </div>
         <div class="item-description">
-          <p class="item-name">{{ item.name }}</p>
+          <p class="item-name">{{ product.Name }}</p>
           <!-- <div class="item-platforms">
             <img
              *ngFor="let itemPlatform of item.parent_platforms"            

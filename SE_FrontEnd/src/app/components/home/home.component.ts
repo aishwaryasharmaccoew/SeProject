@@ -4,26 +4,21 @@ import { Subscription } from 'rxjs';
 import { APIResponse, Item, Product } from '../../models';
 import { HttpService } from 'src/app/services/http.service';
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  stringJson: any;
+  stringObject: any;
   public sort: string;
   public items: Array<Item>;
   public products: Array<Product>;
   private routeSub: Subscription;
-  private itemSub: Subscription;
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
-  ];
+  private productSub: Subscription;
+ 
   constructor(    
     private httpService: HttpService,
     private router: Router,
@@ -40,11 +35,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   searchItems(sort: string, search?: string): void {
-    this.itemSub = this.httpService
+
+
+
+
+    this.productSub = this.httpService
       .getItemList(sort, search)
       .subscribe((productList: APIResponse<Product>) => {
-        this.products = productList.results;
-        console.log("il "+productList);
+       
+        this.stringJson = JSON.stringify(productList);
+        console.log("String json object :", this.stringJson);
+        console.log("Type :", typeof this.stringJson);
+        this.products = JSON.parse(this.stringJson);
+        console.log("JSON object -", this.stringObject);
+
       });
   }
 
@@ -53,8 +57,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.itemSub) {
-      this.itemSub.unsubscribe();
+    if (this.productSub) {
+      this.productSub.unsubscribe();
     }
 
     if (this.routeSub) {

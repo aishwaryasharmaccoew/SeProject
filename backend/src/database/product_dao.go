@@ -31,6 +31,12 @@ func insertRowsFromJSON() {
 		log.Fatal(err2.Error())
 	}
 	addData(DB, product_list)
+
+	err3 := DB.AutoMigrate(&models.Customer{})
+	if err3 != nil {
+		log.Fatal(err3.Error())
+	}
+
 	//printData(DB)
 }
 
@@ -104,4 +110,19 @@ func GetProduct(id string) models.ProductSQL {
 	var productSQL models.ProductSQL
 	DB.Where("Id = ?", id).First(&productSQL)
 	return productSQL
+}
+
+func GetUser(uname string, pass string) models.Customer {
+	var user models.Customer
+	err := DB.Where("user_name = ? AND password = ?", uname, pass).First(&user)
+	if err != nil {
+		log.Println(err)
+	}
+	log.Println(fmt.Sprintf("Got user %s", user))
+	return user
+}
+
+func PersistUser(user models.Customer) {
+	DB.Create(user)
+	log.Println(fmt.Sprintf("%s successfully added", user.UserName))
 }

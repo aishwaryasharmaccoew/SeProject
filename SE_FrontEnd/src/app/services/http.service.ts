@@ -23,34 +23,22 @@ export class HttpService {
     }
     
     return this.http.get<APIResponse<Product>>(`${env.BASE_URL}/`,{
-      params:params/*,
-      headers: {"Access-Control-Allow-Origin": "*", 
-      "Access-Control-Allow-Headers": "access-control-allow-origin, access-control-allow-headers",
-      "Content-Type":"application/json; charset=utf-8"
-    }    */
+      params:params
     });
  
   }
 
-  getItemDetails(id: string): Observable<Item> {
+  getItemDetails(id: string): Observable<Product> {
     const gameInfoRequest = this.http.get(`${env.BASE_URL}/product/${id}`);
-    const gameTrailersRequest = this.http.get(
-      `${env.BASE_URL}/games/${id}/movies`
-    );
-    const gameScreenshotsRequest = this.http.get(
-      `${env.BASE_URL}/games/${id}/screenshots`
-    );
+    
 
     return forkJoin({
-      gameInfoRequest,
-      gameScreenshotsRequest,
-      gameTrailersRequest,
+      gameInfoRequest
+
     }).pipe(
       map((resp: any) => {
         return {
-          ...resp['gameInfoRequest'],
-          screenshots: resp['gameScreenshotsRequest']?.results,
-          trailers: resp['gameTrailersRequest']?.results,
+          ...resp['gameInfoRequest']
         };
       })
     );
