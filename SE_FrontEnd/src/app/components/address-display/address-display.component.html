@@ -1,0 +1,56 @@
+<button *ngIf="!compact && controls" type="button" mat-icon-button style="float: right">
+  <mat-icon *ngIf="!editing" (click)="createContact()" matTooltip="New Contact">person_add</mat-icon>
+  <mat-icon *ngIf="editing" (click)="cancelContact()" matTooltip="Cancel">clear</mat-icon>
+</button>
+<button *ngIf="!compact && controls" type="button" mat-icon-button style="float: right">
+  <mat-icon *ngIf="!editing" (click)="editContact()" matTooltip="Edit Contact">edit</mat-icon>
+  <mat-icon *ngIf="editing" (click)="editContact()" matTooltip="Editing Done">done</mat-icon>
+</button>
+<button *ngIf="!compact && controls" type="button" mat-icon-button style="float: right">
+  <mat-icon *ngIf="!pick" (click)="pickContact()" matTooltip="Choose a contact">find_replace</mat-icon>
+  <mat-icon *ngIf="pick" (click)="pick = false" matTooltip="Cancel">clear</mat-icon>
+</button>
+
+<div *ngIf="compact" [@fadeInOut] [style.text-tramsform]="'capitalize'">
+  <span *ngIf="contact?.name['business']">
+    {{ contact?.name['business'] }}
+  </span>
+  <span *ngIf="contact?.name['first'] || contact?.name['last']" [style.font-size]="contact?.name['business'] ? 'smaller' : 'normal'">
+    <br>{{ contact?.name['first'] }} {{ contact?.name['last'] }}
+  </span>
+  <span *ngIf="!contact?.name?.business && !contact?.name?.first && !contact?.name?.last">
+    Select a contact
+  </span>
+</div>
+
+<div *ngIf="!editing && !compact" [ngStyle]="{'text-align': header ? 'center' : null, 'display': header ? 'flow-root' : null}"
+  [@fadeInOut]>
+
+  <app-contact-selector *ngIf="pick || (!contact?.name?.business && !contact?.name?.first && !contact?.name?.last)"
+    [focusAfterInit]=true (selectedContact)="pickedContact($event)" [@fadeInOut]>
+  </app-contact-selector>
+
+  <div *ngIf="!pick" [@fadeInOut]>
+    <span *ngIf="contact?.name['business']" [@fadeInOut] style="font-size: large">
+      {{ contact?.name['business'] | titlecase }}
+    </span>
+    <span *ngIf="contact?.name['first'] || contact?.name['last']" [@fadeInOut] style="font-size: larger">
+      <br>
+      {{ contact?.name['first'] | titlecase }} {{ contact?.name['last'] | titlecase }}
+    </span>
+    <span *ngIf="contact?.email" [@fadeInOut]>
+      <br>
+      {{ contact?.email }}
+    </span>
+    <span *ngIf="contact &&  formatter()" [@fadeInOut]>
+      <br>
+      {{formatter() | titlecase}}
+    </span>
+    <span *ngFor="let phone of contact?.phones; let i = index">
+      <span *ngIf="phone?.number" [@fadeInOut]>
+        <br>
+        {{phone?.type | underscore: true | titlecase}}: {{phone?.country}} {{phone?.number}}
+      </span>
+    </span>
+  </div>
+</div>
