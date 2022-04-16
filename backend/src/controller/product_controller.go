@@ -33,6 +33,7 @@ func getPaginationInfo(c *gin.Context) (int, int) {
 	}
 
 	return numResults, pageNum
+}
 
 func FilteredProducts(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
