@@ -24,7 +24,7 @@ func connectDB() {
 }
 
 func insertRowsFromJSON() {
-	file_path, _ := filepath.Abs("../src/database/files/vict_products_detailed.jsonl")
+	file_path := filepath.Join(".", "database/files/vict_products_detailed.jsonl")
 	var product_list = Read(file_path)
 	err2 := DB.AutoMigrate(&models.ProductSQL{})
 	if err2 != nil {
