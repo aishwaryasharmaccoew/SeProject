@@ -20,7 +20,7 @@ func main() {
 
 	origins := handlers.AllowedOrigins([]string{"http://localhost:5001", "http://localhost:4200"})
 
-  router.GET("/", controller.LandingPage)
+	router.GET("/", controller.LandingPage)
 	router.GET("/product/:id", controller.GetProduct)
 	router.POST("/product", controller.FilteredProducts)
 	router.POST("/login", controller.Login)

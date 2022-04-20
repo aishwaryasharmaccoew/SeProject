@@ -14,3 +14,11 @@ go install
 cd src
 go run .
 ```
+
+# Start using Docker
+```shell
+cd backend
+docker build --tag fmk_backend .
+docker run -p 5001:5001 fmk_backend
+```
+
