@@ -126,3 +126,24 @@
     margin-right: 10px;
   }
 }
+
+.logout-button{
+  
+  margin:0 ;
+  position: absolute;
+  top: 12%;
+  right: 10%;
+
+  background-color:  #3f51b5;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.logout-button:hover {
+  
+  cursor: pointer;
+}

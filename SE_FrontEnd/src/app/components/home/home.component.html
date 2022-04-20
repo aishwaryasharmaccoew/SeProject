@@ -15,11 +15,15 @@
         <mat-option value="metacritic">Metacritic</mat-option>
       </mat-select>
     </mat-form-field>
+
   </div>
   
+  <div>
+    <button class="logout-button"  [routerLink]="['/login']">Logout</button>
+  </div>
 
-  
   <div class="products">  
+    
     <ng-container *ngFor="let product of products">
       <div class="product" (click)="openItemDetails(product.Id)">
         <div class="item-thumb-container">

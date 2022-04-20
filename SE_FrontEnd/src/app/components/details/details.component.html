@@ -21,9 +21,18 @@
           <p class="item-url">URL: {{ product.Product_url }}</p>
           <p class="item-features">FEATURES: {{ product.Key_features }}</p>
           <p class="item-tools">TOOLS: {{ product.Tools }}</p>
-
+        
+          
         </div>
       </div>
+
+      <div class="popup"  (click)="myFunction()">
+        <button class="button"  > Add to cart </button>
+        <span class="popuptext" id="myPopup">Item Added to Cart</span>
+        </div>
+        <button  class="button2"  [routerLink]="['/home']" >Go Back to Home </button>
+       
+        
     </ng-container>> 
   </div> 
 

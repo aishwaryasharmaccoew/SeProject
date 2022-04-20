@@ -94,6 +94,16 @@ func printData(db *gorm.DB) {
 	}
 }
 
+func AllQueryTable(filters []string) []models.ProductSQL {
+	var productsSql []models.ProductSQL
+	tx := DB.Find(&productsSql)
+	for i := 0; i < len(filters); i++ {
+		var filter = filters[i]
+		tx.Where("Tools LIKE ?", fmt.Sprintf("%%%s%%", filter)).Find(&productsSql)
+	}
+	log.Println(fmt.Sprintf("Number of results obtained %d", len(productsSql)))
+	return productsSql
+}
 func QueryTable(filters []string, numResults int, pageNum int) []models.ProductSQL {
 	var productsSql []models.ProductSQL
 	tx := DB.Find(&productsSql)

@@ -53,6 +53,16 @@ export class DetailsComponent implements OnInit, OnDestroy {
     }
   }
 
+
+  myFunction(){
+    
+    var popup = document.getElementById("myPopup");
+    if (popup!=null) {
+      popup.classList.toggle("show");
+    }
+    
+  }
+
   ngOnDestroy(): void {
     if (this.apiSub) {
       this.apiSub.unsubscribe();

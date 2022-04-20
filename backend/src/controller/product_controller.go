@@ -62,13 +62,7 @@ func LandingPage(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 
-	numResults, pageNum := getPaginationInfo(c)
-	if numResults == -1 {
-		c.JSON(404, "Error while parsing the input JSON")
-		return
-	}
-
-	query_result := dao.QueryTable([]string{}, numResults, pageNum)
+	query_result := dao.AllQueryTable(([]string{}))
 	c.JSON(200, query_result)
 }
 
