@@ -1,5 +1,12 @@
 
 # Things Completed 
+
+- Fixed UI integration issues faced in sprint 2
+- Added backed endpoint for login functionality
+- Added signup endpoint for login functionality
+- Commenced the integration of login signup
+- Finised doing necessary validations
+
 ## 1. Integrated backend and frontend
 **Integration Demo**: [Link](https://youtu.be/8WCDBUy-N4o)
 ## 2. Units tests For FrontEnd
