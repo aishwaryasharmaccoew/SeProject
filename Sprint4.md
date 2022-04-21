@@ -26,6 +26,7 @@ Once they are done shopping, they can logout successfully and hopefully return t
 **Test Video**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/tree/main/backend/test)
 ## 5. Documentation
 
+**Frontend API Documentation**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/SE_FrontEnd/README.md)
 **Backend API Documentation**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/api_documentation.md)  
 **Postman Collection (v2)**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/src/postman_api_samples/findmyknife.postman_collection.json)  
 
