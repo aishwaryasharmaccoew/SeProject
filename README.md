@@ -18,9 +18,10 @@ Once they are done shopping, they can logout successfully and hopefully return t
 <br/>
 
 ## 2. Demo Functionality
-**Integration Demo**: [Link](https://youtu.be/8WCDBUy-N4o)
+**Integration Demo**: [Link](https://drive.google.com/file/d/1gChvegChA-dI1v-Xv002lJV9AEL8j0rB/view?usp=sharing)
 
 ## 3. Cypress Tests for UI
+**Test Video**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/tree/main/backend/test)
 ## 4. Backend Test Video
 **Test Video**: [Link](https://github.com/aishwaryasharmaccoew/SeProject/tree/main/backend/test)
 ## 5. Documentation
