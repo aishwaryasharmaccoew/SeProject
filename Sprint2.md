@@ -1,5 +1,10 @@
 
 # Things Completed 
+
+-Implemented pagination functionality
+-Solved CORS issue for integration
+-Integrated backend and frontend with some display issues
+
 ## 1. Integrated backend and frontend
 **Integration Demo**: [Link](https://youtu.be/8WCDBUy-N4o)
 ## 2. Units tests For FrontEnd
