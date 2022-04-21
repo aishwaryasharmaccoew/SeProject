@@ -2,6 +2,7 @@
 # Things Completed 
 
 - Fixed UI integration issues faced in sprint 2
+- Added backend test cases.
 - Added backed endpoint for login functionality
 - Added signup endpoint for login functionality
 - Commenced the integration of login signup
