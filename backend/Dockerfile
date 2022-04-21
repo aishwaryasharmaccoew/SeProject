@@ -10,7 +10,7 @@ COPY go.sum ./
 RUN go mod download
 
 COPY . ./
-#RUN go build ./src/app.go
+RUN go build ./src/app.go
 
 
 WORKDIR /app/src
