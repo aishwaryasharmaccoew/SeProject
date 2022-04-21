@@ -2,13 +2,21 @@
 # Things Completed 
 ## 1. Application Description
 
-This is an e-commerce website for viewing and customizing swiss knifes as once purchased, swiss knives go a long way. It caters to customers like Bob/Nancy who fancy a highly customised product which they can create by picking and choosing from feature the available set.
 
+<img align="left" width="300" height="300" src="https://user-images.githubusercontent.com/20923921/164349857-24aa6b5c-184a-4c75-809e-dff11cb95a7d.png">
+<br/>
+<br/>
+This is an e-commerce website for viewing and customizing swiss knifes as once purchased, swiss knives go a long way. It caters to customers like Bob/Nancy who fancy a highly customised product which they can create by picking and choosing from feature the available set.
+<br/>
+<br/>
 Our application enables the same as Bob/Nancy can see the whole range of customizable products after they are able to successfully login.
 If Bob/Nancy have not shopped with us before, they can signup using the register functionality.
 They can also search for a particular product they already have in mind cause they are super picky :).
+<br/>
 Finally they can proceed to pick/customise their product and add it to their cart. 
 Once they are done shopping, they can logout successfully and hopefully return to shop with us.
+<br/>
+<br/>
 
 ## 2. Demo Functionality
 **Integration Demo**: [Link](https://youtu.be/8WCDBUy-N4o)
@@ -36,7 +44,8 @@ Once they are done shopping, they can logout successfully and hopefully return t
 ## 9. Enhancing deployablity
 
 **Deployment**
-Created a dockerfile to build and run the backend
+
+Created a dockerfile to readily build and run the project
 [Link to docker file](https://github.com/aishwaryasharmaccoew/SeProject/blob/main/backend/Dockerfile)
 
 
