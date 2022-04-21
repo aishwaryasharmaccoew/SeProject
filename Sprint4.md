@@ -1,7 +1,7 @@
 
 # Things Completed 
-- Integrated login, signup to the existing website.
-- Added frontend valodations for the same
+- Integrated login, signup to the existing website, this needed revamping of the UI.
+- Added frontend validations for the same
 - Added logout, add to cart and go back to home fuctionality
 - Fixed original functionality that was breaking
 - Performed the final integration
