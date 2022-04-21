@@ -5,10 +5,10 @@
 <img align="left" width="300" height="300" src="https://user-images.githubusercontent.com/20923921/164349857-24aa6b5c-184a-4c75-809e-dff11cb95a7d.png">
 <br/>
 <br/>
-This is an e-commerce website for viewing and customizing swiss knifes as once purchased, swiss knives go a long way. It caters to customers like Bob/Nancy who fancy a highly customised product which they can create by picking and choosing from feature the available set.
+This is an e-commerce website for viewing and customizing swiss knifes as once purchased, swiss knives go a long way. It caters to customers like Bob/Nancy who fancy a highly customised product which they can create by picking and choosing features from the available set.
 <br/>
 <br/>
-Our application enables the same as Bob/Nancy can see the whole range of customizable products after they are able to successfully login.
+Our application enables the same, as Bob/Nancy can see the whole range of customizable products after they are able to successfully login.
 If Bob/Nancy have not shopped with us before, they can signup using the register functionality.
 They can also search for a particular product they already have in mind cause they are super picky :).
 <br/>
